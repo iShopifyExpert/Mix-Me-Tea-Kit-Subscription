@@ -550,6 +550,7 @@ $(document).ready(function () {
        var idi = $(this).parents("li").data('connect');
        $(this).parents("li").slideUp()
        $('#'+idi).val('0');
+       if($('#properties-flavors-1 :selected').val() != 0 && $('#properties-flavors-2 :selected').val() != 0 && $('#properties-flavors-3 :selected').val() != 0 && $('#properties-flavors-4 :selected').val() != 0 && $('#properties-flavors-5 :selected').val() != 0) { $('#submit-table').attr('disabled', false); }
     });
 	$("#submit-table").click(function(e) {     
 		e.preventDefault();
