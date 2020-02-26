@@ -229,7 +229,7 @@
             
             <div class="cart-button">
               {% if product.available %}
-              <button id="submit-table" type="submit" name="add" class="btn btn--add-to-cart{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}">
+              <button id="submit-table" type="submit" name="add" class="btn btn--add-to-cart{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}" disabled="disabled">
                 <span class="btn__text">Add to Bag</span>
               </button>
               {% else %}
@@ -502,6 +502,7 @@ $(document).ready(function () {
     $("#properties-flavors-{{i}}").change(function() {
         $("#properties-flavor-{{i}} span").text($(this).val());
         $("#properties-flavor-{{i}}").slideDown();
+        if($('#properties-flavors-1 :selected').val() != 0 && $('#properties-flavors-2 :selected').val() != 0 && $('#properties-flavors-3 :selected').val() != 0 && $('#properties-flavors-4 :selected').val() != 0 && $('#properties-flavors-5 :selected').val() != 0) { $('#submit-table').attr('disabled', false); }
     });
     {%- endfor -%}
     {%- for block in section.blocks -%}{%- if block.type == 'topping' -%}
