@@ -476,7 +476,7 @@ a.returntocollection {
     width: 100%;
     text-align: center;
 }
-.overlay_checked, .overlay_unchecked {position: relative;}.overlay_unchecked span.overlay_background_c {display: none;}.overlay_checked span.overlay_background_c {background: rgba(0, 0, 0, 0.4);position: absolute;top: 0;left: 0;right: 0;bottom: 0;}.overlay_checked i.fa.fa-check-circle {position: absolute;top: 35%;left: 42%;color: #8cc63f;font-size: 40px;}
+.overlay_checked, .overlay_unchecked {position: relative;}.overlay_unchecked span.overlay_background_c {display: none;}.overlay_checked span.overlay_background_c {background: rgba(0, 0, 0, 0.4);position: absolute;top: 0;left: 0;right: 0;bottom: 0;}.overlay_checked i.fa.fa-check-circle {position: absolute;top: 38%;left: 40%;color: #ffffff;font-size: 50px;}img.summary-img {display: block;}
 @media only screen and (min-width: 750px) {
   .choose-drink {
     display: inline-block;
@@ -549,7 +549,7 @@ $(document).ready(function () {
     $("ul.all-items li i").click(function() {
        var idi = $(this).parents("li").data('connect');
        $(this).parents("li").slideUp()
-       $('#'+idi).val('0');
+       $('#'+idi).val('0').trigger("change");
        if($('#properties-flavors-1 :selected').val() != 0 && $('#properties-flavors-2 :selected').val() != 0 && $('#properties-flavors-3 :selected').val() != 0 && $('#properties-flavors-4 :selected').val() != 0 && $('#properties-flavors-5 :selected').val() != 0) { $('#submit-table').attr('disabled', false); }
     });
 	$("#submit-table").click(function(e) {     
