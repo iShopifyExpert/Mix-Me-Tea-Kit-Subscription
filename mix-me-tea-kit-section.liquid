@@ -546,7 +546,7 @@ $(document).ready(function () {
       }
     });
     {%- endif -%}{%- endfor -%}
-    $("ul.all-items li i").click(function() {
+    $("ul.all-items li i.fa.fa-minus-circle").click(function() {
        var idi = $(this).parents("li").data('connect');
        $(this).parents("li").slideUp()
        $('#'+idi).val('0').trigger("change");
